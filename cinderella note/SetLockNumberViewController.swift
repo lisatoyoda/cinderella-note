@@ -21,7 +21,9 @@ class SetLockNumberViewController: UIViewController {
     }
     
     @IBAction func savenumber () {
+        saveData.set("true", forKey: "setNumber") as! String
         saveData.set(textfield.text, forKey: "locknumber") as! String
+        self.dismiss(animated: true, completion: nil)
     }
     
     /*
