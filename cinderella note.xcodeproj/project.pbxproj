@@ -15,6 +15,9 @@
 		423F07BF2500F02E00F59D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423F07BD2500F02E00F59D3D /* LaunchScreen.storyboard */; };
 		423F07CA2500F02E00F59D3D /* cinderella_noteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07C92500F02E00F59D3D /* cinderella_noteTests.swift */; };
 		423F07D52500F02E00F59D3D /* cinderella_noteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07D42500F02E00F59D3D /* cinderella_noteUITests.swift */; };
+		423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E22500F0D400F59D3D /* my rule ViewController.swift */; };
+		423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E42500F1B900F59D3D /* LockViewController.swift */; };
+		423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		423F07D02500F02E00F59D3D /* cinderella noteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cinderella noteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423F07D42500F02E00F59D3D /* cinderella_noteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinderella_noteUITests.swift; sourceTree = "<group>"; };
 		423F07D62500F02E00F59D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423F07E22500F0D400F59D3D /* my rule ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "my rule ViewController.swift"; sourceTree = "<group>"; };
+		423F07E42500F1B900F59D3D /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLockNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,12 @@
 				423F07B42500F02900F59D3D /* SceneDelegate.swift */,
 				423F07B62500F02900F59D3D /* ViewController.swift */,
 				423F07B82500F02900F59D3D /* Main.storyboard */,
+				423F07E22500F0D400F59D3D /* my rule ViewController.swift */,
 				423F07BB2500F02E00F59D3D /* Assets.xcassets */,
 				423F07BD2500F02E00F59D3D /* LaunchScreen.storyboard */,
 				423F07C02500F02E00F59D3D /* Info.plist */,
+				423F07E42500F1B900F59D3D /* LockViewController.swift */,
+				423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -259,6 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */,
+				423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */,
+				423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */,
 				423F07B72500F02900F59D3D /* ViewController.swift in Sources */,
 				423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */,
 				423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */,
