@@ -18,6 +18,8 @@
 		423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E22500F0D400F59D3D /* my rule ViewController.swift */; };
 		423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E42500F1B900F59D3D /* LockViewController.swift */; };
 		423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */; };
+		42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE8225540C6700A7F60A /* MealViewController.swift */; };
+		42ACBE85255D46CF00A7F60A /* DaiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE84255D46CF00A7F60A /* DaiaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		423F07E22500F0D400F59D3D /* my rule ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "my rule ViewController.swift"; sourceTree = "<group>"; };
 		423F07E42500F1B900F59D3D /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLockNumberViewController.swift; sourceTree = "<group>"; };
+		42ACBE8225540C6700A7F60A /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		42ACBE84255D46CF00A7F60A /* DaiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaiaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				423F07C02500F02E00F59D3D /* Info.plist */,
 				423F07E42500F1B900F59D3D /* LockViewController.swift */,
 				423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */,
+				42ACBE8225540C6700A7F60A /* MealViewController.swift */,
+				42ACBE84255D46CF00A7F60A /* DaiaryViewController.swift */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -271,8 +277,10 @@
 				423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */,
 				423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */,
 				423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */,
+				42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */,
 				423F07B72500F02900F59D3D /* ViewController.swift in Sources */,
 				423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */,
+				42ACBE85255D46CF00A7F60A /* DaiaryViewController.swift in Sources */,
 				423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

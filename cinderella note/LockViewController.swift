@@ -11,7 +11,7 @@ import UIKit
 class LockViewController: UIViewController {
     
     @IBOutlet var locknumber : UITextField!
-    @IBOutlet var button : UIButton!
+    @IBOutlet var okbutton : UIButton!
     let saveData: UserDefaults = UserDefaults.standard
     var savedlocknumber :Int!
     var setNumber: String = ""
