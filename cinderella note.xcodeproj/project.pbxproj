@@ -20,6 +20,7 @@
 		423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */; };
 		42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A09C258228E2004F44CF /* WalkingViewController.swift */; };
 		42A3A0A125822DC9004F44CF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A3A0A025822DC9004F44CF /* HealthKit.framework */; };
+		42A3A0A325823A6D004F44CF /* checkMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A3A0A225823A6D004F44CF /* checkMark.jpg */; };
 		42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE8225540C6700A7F60A /* MealViewController.swift */; };
 		42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		42A3A09C258228E2004F44CF /* WalkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingViewController.swift; sourceTree = "<group>"; };
 		42A3A09E25822DC9004F44CF /* cinderella note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cinderella note.entitlements"; sourceTree = "<group>"; };
 		42A3A0A025822DC9004F44CF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		42A3A0A225823A6D004F44CF /* checkMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkMark.jpg; sourceTree = "<group>"; };
 		42ACBE8225540C6700A7F60A /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 		423F07B12500F02900F59D3D /* cinderella note */ = {
 			isa = PBXGroup;
 			children = (
+				42A3A0A225823A6D004F44CF /* checkMark.jpg */,
 				42A3A09E25822DC9004F44CF /* cinderella note.entitlements */,
 				423F07B22500F02900F59D3D /* AppDelegate.swift */,
 				423F07B42500F02900F59D3D /* SceneDelegate.swift */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				423F07BF2500F02E00F59D3D /* LaunchScreen.storyboard in Resources */,
+				42A3A0A325823A6D004F44CF /* checkMark.jpg in Resources */,
 				423F07BC2500F02E00F59D3D /* Assets.xcassets in Resources */,
 				423F07BA2500F02900F59D3D /* Main.storyboard in Resources */,
 			);
