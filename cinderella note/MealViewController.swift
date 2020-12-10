@@ -15,9 +15,10 @@ class MealViewController: UIViewController {
     @IBOutlet var lunchTextField: UITextField!
     @IBOutlet var supperTextField: UITextField!
     @IBOutlet var oyatsuTextField: UITextField!
+    @IBOutlet var selectedDaylabel: UILabel!
     
-    var dayDate = Date()
-    var today: String = ""
+    var date = Date()
+    var selectedDay: String = ""
     let dateFormatter = DateFormatter()
     
     
@@ -28,11 +29,11 @@ class MealViewController: UIViewController {
         // Do any additional setup after loading the view.
         super.viewDidLoad()
         
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector(("didSwipe")))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
         rightSwipe.direction = .right
         view.addGestureRecognizer(rightSwipe)
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector(("didSwipe:")))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
         leftSwipe.direction = .left
         view.addGestureRecognizer(leftSwipe)
         
@@ -45,50 +46,84 @@ class MealViewController: UIViewController {
             }
         }
         
-//keyを使って呼び出すコード
-        breakfastTextField.text = saveData.object(forKey: today + "breakfast") as? String
-        lunchTextField.text = saveData.object(forKey: today + "lunch") as? String
-        supperTextField.text = saveData.object(forKey: today + "supper") as? String
-        oyatsuTextField.text = saveData.object(forKey: today + "oyatsu") as? String
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        selectedDay = dateFormatter.string(from: date)
+        selectedDaylabel.text = selectedDay
+        print(selectedDay)
         
-        dateFormatter.dateFormat = "yyyyMMdd"
-//        print(dateFormatter.string(from: dayDate))
-        today = dateFormatter.string(from: dayDate)
-        print(today)
+        //keyを使って呼び出すコード
+        breakfastTextField.text = saveData.object(forKey: selectedDay + "breakfast") as? String
+        lunchTextField.text = saveData.object(forKey: selectedDay + "lunch") as? String
+        supperTextField.text = saveData.object(forKey: selectedDay + "supper") as? String
+        
+    }
+    
+    @objc func swiped(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .left:
+            print("swiped left")
+            nextDay()
+        case .right:
+            print("swiped right")
+            previousDay()
+        default:
+            break
+        }
+    }
+    
+    @objc func nextDay() {
+        //１日後にする
+        date = Date (timeInterval: 60*60*24, since: date)
+        selectedDay = dateFormatter.string(from: date)
+        selectedDaylabel.text = selectedDay
+        breakfastTextField.text = saveData.object(forKey: selectedDay + "breakfast") as? String
+        lunchTextField.text = saveData.object(forKey: selectedDay + "lunch") as? String
+        supperTextField.text = saveData.object(forKey: selectedDay + "supper") as? String
+        
+    }
+    
+    @objc func previousDay() {
+        date = Date (timeInterval: -60*60*24, since: date)
+        selectedDay = dateFormatter.string(from: date)
+        selectedDaylabel.text = selectedDay
+        breakfastTextField.text = saveData.object(forKey: selectedDay + "breakfast") as? String
+        lunchTextField.text = saveData.object(forKey: selectedDay + "lunch") as? String
+        supperTextField.text = saveData.object(forKey: selectedDay + "supper") as? String
+        
     }
     
     
     @IBAction func saveMeal() {
-//        dayDate = Calender.current.date(byAdding: .dayDate, value: -1, to: dayDate)!
-//savedateにセットする
-        saveData.set(breakfastTextField.text, forKey: today + "breakfast")
-        saveData.set(lunchTextField.text, forKey: today + "lunch")
-        saveData.set(supperTextField.text, forKey: today + "supper")
-        saveData.set(oyatsuTextField.text, forKey: today + "oyatsu")
+        //        dayDate = Calender.current.date(byAdding: .dayDate, value: -1, to: dayDate)!
+        //savedateにセットする
+        saveData.set(breakfastTextField.text, forKey: selectedDay + "breakfast")
+        saveData.set(lunchTextField.text, forKey: selectedDay + "lunch")
+        saveData.set(supperTextField.text, forKey: selectedDay + "supper")
+        saveData.set(oyatsuTextField.text, forKey: selectedDay + "oyatsu")
         
         
         
         
     }
     
-    @IBAction func back() {
-        
-        breakfastTextField.text = saveData.object(forKey: "20201111" + "breakfast") as? String
-        lunchTextField.text = saveData.object(forKey: "20201111" + "lunch") as? String
-        supperTextField.text = saveData.object(forKey: "20201111" + "supper") as? String
-        oyatsuTextField.text = saveData.object(forKey: "20201111" + "oyatsu") as? String
-    }
-    
-    
-    
-    @IBAction func next() {
-        breakfastTextField.text = saveData.object(forKey: "20201113" + "breakfast") as? String
-        lunchTextField.text = saveData.object(forKey: "20201113" + "lunch") as? String
-        supperTextField.text = saveData.object(forKey: "20201113" + "supper") as? String
-        oyatsuTextField.text = saveData.object(forKey: "20201113" + "oyatsu") as? String
-        
-    }
-    
+//    @IBAction func back() {
+//        
+//        breakfastTextField.text = saveData.object(forKey: "20201111" + "breakfast") as? String
+//        lunchTextField.text = saveData.object(forKey: "20201111" + "lunch") as? String
+//        supperTextField.text = saveData.object(forKey: "20201111" + "supper") as? String
+//        oyatsuTextField.text = saveData.object(forKey: "20201111" + "oyatsu") as? String
+//    }
+//    
+//    
+//    
+//    @IBAction func next() {
+//        breakfastTextField.text = saveData.object(forKey: "20201113" + "breakfast") as? String
+//        lunchTextField.text = saveData.object(forKey: "20201113" + "lunch") as? String
+//        supperTextField.text = saveData.object(forKey: "20201113" + "supper") as? String
+//        oyatsuTextField.text = saveData.object(forKey: "20201113" + "oyatsu") as? String
+//        
+//    }
+//    
     
     
     /*
