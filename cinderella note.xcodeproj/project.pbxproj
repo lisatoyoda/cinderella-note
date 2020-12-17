@@ -15,12 +15,13 @@
 		423F07BF2500F02E00F59D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423F07BD2500F02E00F59D3D /* LaunchScreen.storyboard */; };
 		423F07CA2500F02E00F59D3D /* cinderella_noteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07C92500F02E00F59D3D /* cinderella_noteTests.swift */; };
 		423F07D52500F02E00F59D3D /* cinderella_noteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07D42500F02E00F59D3D /* cinderella_noteUITests.swift */; };
-		423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E22500F0D400F59D3D /* my rule ViewController.swift */; };
 		423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E42500F1B900F59D3D /* LockViewController.swift */; };
 		423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */; };
 		42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A09C258228E2004F44CF /* WalkingViewController.swift */; };
 		42A3A0A125822DC9004F44CF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A3A0A025822DC9004F44CF /* HealthKit.framework */; };
 		42A3A0A325823A6D004F44CF /* checkMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A3A0A225823A6D004F44CF /* checkMark.jpg */; };
+		42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */; };
+		42A3A0A7258B6990004F44CF /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A0A6258B6990004F44CF /* RuleViewController.swift */; };
 		42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE8225540C6700A7F60A /* MealViewController.swift */; };
 		42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,13 +58,14 @@
 		423F07D02500F02E00F59D3D /* cinderella noteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cinderella noteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423F07D42500F02E00F59D3D /* cinderella_noteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cinderella_noteUITests.swift; sourceTree = "<group>"; };
 		423F07D62500F02E00F59D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		423F07E22500F0D400F59D3D /* my rule ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "my rule ViewController.swift"; sourceTree = "<group>"; };
 		423F07E42500F1B900F59D3D /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLockNumberViewController.swift; sourceTree = "<group>"; };
 		42A3A09C258228E2004F44CF /* WalkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingViewController.swift; sourceTree = "<group>"; };
 		42A3A09E25822DC9004F44CF /* cinderella note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cinderella note.entitlements"; sourceTree = "<group>"; };
 		42A3A0A025822DC9004F44CF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		42A3A0A225823A6D004F44CF /* checkMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkMark.jpg; sourceTree = "<group>"; };
+		42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myRuleViewController.swift; sourceTree = "<group>"; };
+		42A3A0A6258B6990004F44CF /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		42ACBE8225540C6700A7F60A /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,15 +126,16 @@
 				423F07B42500F02900F59D3D /* SceneDelegate.swift */,
 				423F07B62500F02900F59D3D /* ViewController.swift */,
 				423F07B82500F02900F59D3D /* Main.storyboard */,
-				423F07E22500F0D400F59D3D /* my rule ViewController.swift */,
 				423F07BB2500F02E00F59D3D /* Assets.xcassets */,
 				423F07BD2500F02E00F59D3D /* LaunchScreen.storyboard */,
 				423F07C02500F02E00F59D3D /* Info.plist */,
 				423F07E42500F1B900F59D3D /* LockViewController.swift */,
+				42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */,
 				423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */,
 				42ACBE8225540C6700A7F60A /* MealViewController.swift */,
 				42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */,
 				42A3A09C258228E2004F44CF /* WalkingViewController.swift */,
+				42A3A0A6258B6990004F44CF /* RuleViewController.swift */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -295,12 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423F07E32500F0D400F59D3D /* my rule ViewController.swift in Sources */,
 				423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */,
 				423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */,
 				42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */,
 				423F07B72500F02900F59D3D /* ViewController.swift in Sources */,
+				42A3A0A7258B6990004F44CF /* RuleViewController.swift in Sources */,
 				423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */,
+				42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */,
 				42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */,
 				423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */,
 				42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */,
