@@ -11,6 +11,9 @@ import UIKit
 class myRuleViewController: UIViewController , UITableViewDataSource {
     
     @IBOutlet var table : UITableView!
+    var ruleViewController = RuleViewController()
+    var RuleArray: [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +22,13 @@ class myRuleViewController: UIViewController , UITableViewDataSource {
         
     }
     func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return RuleArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
-        cell?.textLabel?.text = "テスト"
+        cell?.textLabel?.text = RuleArray[indexPath.row]
         return cell!
     }
     
