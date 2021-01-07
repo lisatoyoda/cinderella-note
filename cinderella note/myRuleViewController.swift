@@ -18,11 +18,13 @@ class myRuleViewController: UIViewController , UITableViewDataSource {
         table.dataSource = self
         
     }
-    func tableView(_ tableView: numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-    func tableView(_ tabelView: UITableView, cellForRowAt indexPath: IndexPath) -> UITbelViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        
         cell?.textLabel?.text = "テスト"
         return cell!
     }
@@ -31,5 +33,6 @@ class myRuleViewController: UIViewController , UITableViewDataSource {
     
     
     // Do any additional setup after loading the view.
+    
+    
 }
-
