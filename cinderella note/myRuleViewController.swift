@@ -8,14 +8,28 @@
 
 import UIKit
 
-class myRuleViewController: UIViewController {
+class myRuleViewController: UIViewController , UITableViewDataSource {
+    
+    @IBOutlet var table : UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        table.dataSource = self
         
-        
-        
-        // Do any additional setup after loading the view.
     }
+    func tableView(_ tableView: numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    func tableView(_ tabelView: UITableView, cellForRowAt indexPath: IndexPath) -> UITbelViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        cell?.textLabel?.text = "テスト"
+        return cell!
+    }
+    
+    
+    
+    
+    // Do any additional setup after loading the view.
 }
+

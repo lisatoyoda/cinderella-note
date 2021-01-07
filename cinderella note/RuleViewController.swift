@@ -9,7 +9,7 @@
 import UIKit
 
 class RuleViewController: UIViewController {
-  override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         
@@ -35,13 +35,14 @@ class RuleViewController: UIViewController {
             finishbutton1.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
             print("ルール１を押す")
             RuleArray.append("日記")
-//            print("日記押した")
+            //            print("日記押した")
             print(RuleArray)
             
         } else {
             plan1 = 0
             finishbutton1.setBackgroundImage(nil, for: .normal)
             RuleArray.removeAll(where: {$0 == "日記"})
+            print(RuleArray)
         }
     }
     
@@ -51,7 +52,7 @@ class RuleViewController: UIViewController {
             finishbutton2.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
             print("ルール２おした")
             RuleArray.append("歩数")
-//            print("歩数押した")
+            //            print("歩数押した")
             print(RuleArray)
             
             
@@ -59,6 +60,7 @@ class RuleViewController: UIViewController {
             plan1 = 0
             finishbutton2.setBackgroundImage(nil, for: .normal)
             RuleArray.removeAll(where: {$0 == "歩数"})
+            print(RuleArray)
         }
     }
     
@@ -67,15 +69,16 @@ class RuleViewController: UIViewController {
         if plan1 == 0 {
             plan1 = 1
             finishbutton3.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
-//            print("ルール３おした")
+            //            print("ルール３おした")
             RuleArray.append("睡眠")
-
+            
             print(RuleArray)
             
         } else {
             plan1 = 0
             finishbutton3.setBackgroundImage(nil, for: .normal)
             RuleArray.removeAll(where: {$0 == "睡眠"})
+            print(RuleArray)
         }
     }
     

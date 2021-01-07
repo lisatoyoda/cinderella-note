@@ -178,7 +178,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="IKC-eb-VWR" kind="show" id="Bnh-Xt-cyO"/>
+                                    <segue destination="IKC-eb-VWR" kind="presentation" id="sXk-dt-pTa"/>
                                 </connections>
                             </button>
                         </subviews>
