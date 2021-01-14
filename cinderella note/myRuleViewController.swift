@@ -22,9 +22,9 @@ class myRuleViewController: UIViewController , UITableViewDataSource , UITableVi
         
         if saveData.object(forKey:"rulesave") != nil
         {
-    
-        RuleArray = saveData.object(forKey:"rulesave") as! [String]
-    
+            
+            RuleArray = saveData.object(forKey:"rulesave") as! [String]
+            
         }
         table.dataSource = self
         
@@ -47,11 +47,28 @@ class myRuleViewController: UIViewController , UITableViewDataSource , UITableVi
             self.performSegue(withIdentifier: "toDiary", sender: nil)
         }
         print(indexPath.row)
+        
+        if RuleArray[indexPath.row] == "食事" {
+            self.performSegue(withIdentifier: "toMeal", sender: nil)
+        }
+        print(indexPath.row)
+        
+        
+        
+        if RuleArray[indexPath.row] == "睡眠" {
+            self.performSegue(withIdentifier: "tosleeping", sender: nil)
+        }
+        print(indexPath.row)
     }
     
     
     
+    
+    
+    
     // Do any additional setup after loading the view.
+    
+    
     
     
 }

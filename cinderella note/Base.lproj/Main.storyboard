@@ -69,7 +69,7 @@
                     </view>
                     <connections>
                         <segue destination="8aY-gi-J7X" kind="show" identifier="toAnything" id="cMu-hC-9dz"/>
-                        <segue destination="rA6-cp-5JL" kind="show" identifier="toDialy" id="ppr-tG-hqF"/>
+                        <segue destination="rA6-cp-5JL" kind="show" identifier="toDiary" id="ppr-tG-hqF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-to-npQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
