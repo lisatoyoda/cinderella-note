@@ -27,7 +27,10 @@ class RuleViewController: UIViewController {
     @IBOutlet var finishbutton3: UIButton!
     
     var plan1: Int = 0
+    var plan2: Int = 0
+    var plan3: Int = 0
     var RuleArray: [String] = []
+    let saveData: UserDefaults = UserDefaults.standard
     
     @IBAction func push1() {
         if plan1 == 0 {
@@ -44,11 +47,12 @@ class RuleViewController: UIViewController {
             RuleArray.removeAll(where: {$0 == "日記"})
             print(RuleArray)
         }
+        saveData.set(RuleArray,forKey:"rulesave")
     }
     
     @IBAction func push2() {
-        if plan1 == 0 {
-            plan1 = 1
+        if plan2 == 0 {
+            plan2 = 1
             finishbutton2.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
             print("ルール２おした")
             RuleArray.append("歩数")
@@ -57,17 +61,18 @@ class RuleViewController: UIViewController {
             
             
         } else {
-            plan1 = 0
+            plan2 = 0
             finishbutton2.setBackgroundImage(nil, for: .normal)
             RuleArray.removeAll(where: {$0 == "歩数"})
             print(RuleArray)
         }
+        saveData.set(RuleArray,forKey:"rulesave")
     }
     
     
     @IBAction func push3() {
-        if plan1 == 0 {
-            plan1 = 1
+        if plan3 == 0 {
+            plan3 = 1
             finishbutton3.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
             //            print("ルール３おした")
             RuleArray.append("睡眠")
@@ -75,11 +80,12 @@ class RuleViewController: UIViewController {
             print(RuleArray)
             
         } else {
-            plan1 = 0
+            plan3 = 0
             finishbutton3.setBackgroundImage(nil, for: .normal)
             RuleArray.removeAll(where: {$0 == "睡眠"})
             print(RuleArray)
         }
+        saveData.set(RuleArray,forKey:"rulesave")
     }
     
     
