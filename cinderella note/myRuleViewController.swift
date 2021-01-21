@@ -42,35 +42,39 @@ class myRuleViewController: UIViewController , UITableViewDataSource , UITableVi
         return cell!
     }
     
+    
+    
+    
+    
     func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath) {
         if RuleArray[indexPath.row] == "日記" {
             self.performSegue(withIdentifier: "toDiary", sender: nil)
-        }
-        print(indexPath.row)
-        
-//        if RuleArray[indexPath.row] == "食事" {
-//            self.performSegue(withIdentifier: "toMeal", sender: nil)
-//        }
-//        print(indexPath.row)
-        
-        
-        if RuleArray[indexPath.row] == "ウォーキング" {
-                self.performSegue(withIdentifier: "toWalking", sender: nil)
-            }
             print(indexPath.row)
+        }
         
+        if RuleArray[indexPath.row] == "食事" {
+            self.performSegue(withIdentifier: "toMeal", sender: nil)
+            print(indexPath.row)
+        }
         
         
         if RuleArray[indexPath.row] == "睡眠" {
             self.performSegue(withIdentifier: "toSleeping", sender: nil)
+            print(indexPath.row)
         }
-        print(indexPath.row)
+        
+        if RuleArray[indexPath.row] == "ウォーキング" {
+            self.performSegue(withIdentifier: "toWalking", sender: nil)
+            print(indexPath.row)
+        }
+        
+        if RuleArray[indexPath.row] == "その他" {
+            self.performSegue(withIdentifier: "toMeal", sender: nil)
+            print(indexPath.row)
+        }
+        
+        
     }
-    
-    
-    
-    
-    
     
     // Do any additional setup after loading the view.
     

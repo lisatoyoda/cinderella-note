@@ -12,6 +12,9 @@ import HealthKit
 class WalkingViewController: UIViewController {
     
     @IBOutlet weak var Steps: UILabel!
+    @IBOutlet var Goal: UILabel!
+    
+    var plan: Int = 3000
     
     
     override func viewDidLoad() {
@@ -25,6 +28,10 @@ class WalkingViewController: UIViewController {
         let endOfDate = calendar.date(byAdding: DateComponents(day: 1), to: startOfDate)!
         
         updateStepLabel(start: startOfDate, end: endOfDate)
+        
+        Goal.text = "\(plan - Int(value))"
+      
+
     }
     
     @IBAction func valueChanged(_ sender: UIDatePicker) {
