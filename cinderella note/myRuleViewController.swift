@@ -48,15 +48,21 @@ class myRuleViewController: UIViewController , UITableViewDataSource , UITableVi
         }
         print(indexPath.row)
         
-        if RuleArray[indexPath.row] == "食事" {
-            self.performSegue(withIdentifier: "toMeal", sender: nil)
-        }
-        print(indexPath.row)
+//        if RuleArray[indexPath.row] == "食事" {
+//            self.performSegue(withIdentifier: "toMeal", sender: nil)
+//        }
+//        print(indexPath.row)
+        
+        
+        if RuleArray[indexPath.row] == "ウォーキング" {
+                self.performSegue(withIdentifier: "toWalking", sender: nil)
+            }
+            print(indexPath.row)
         
         
         
         if RuleArray[indexPath.row] == "睡眠" {
-            self.performSegue(withIdentifier: "tosleeping", sender: nil)
+            self.performSegue(withIdentifier: "toSleeping", sender: nil)
         }
         print(indexPath.row)
     }

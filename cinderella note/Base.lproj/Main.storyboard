@@ -67,10 +67,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ASA-mA-mqB"/>
                     </view>
-                    <connections>
-                        <segue destination="8aY-gi-J7X" kind="show" identifier="toAnything" id="cMu-hC-9dz"/>
-                        <segue destination="rA6-cp-5JL" kind="show" identifier="toDiary" id="ppr-tG-hqF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-to-npQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,6 +200,8 @@
                         <segue destination="OBK-t9-oJy" kind="show" identifier="toMeal" id="qFV-Hx-pmT"/>
                         <segue destination="9MS-m8-3A2" kind="show" identifier="toSleeping" id="Znk-8J-Dac"/>
                         <segue destination="dOE-JO-8er" kind="show" identifier="toWalking" id="mMb-Cr-ANH"/>
+                        <segue destination="8aY-gi-J7X" kind="show" identifier="toAnything" id="Mr4-m1-HWW"/>
+                        <segue destination="rA6-cp-5JL" kind="show" identifier="toDiary" id="CBp-uq-jzy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nj-Fh-JPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
