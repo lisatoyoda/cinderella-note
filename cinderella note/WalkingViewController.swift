@@ -29,7 +29,7 @@ class WalkingViewController: UIViewController {
         
         updateStepLabel(start: startOfDate, end: endOfDate)
         
-        Goal.text = "\(plan - Int(value))"
+        
       
 
     }
@@ -66,11 +66,14 @@ class WalkingViewController: UIViewController {
     
     func updateStepLabel(start: Date, end: Date) {
         
+
+        
         
         getCountStepUsingStatisticsQueryWithoutThirdpartyData(from: start, to: end) { (query, statistics, error) in
             DispatchQueue.main.async {
                 if let value = statistics?.sumQuantity()?.doubleValue(for: .count()) {
                     self.Steps.text = "\(Int(value)) steps"
+                    self.Goal.text = "目標まであと\(self.plan - Int(value))歩"
                 } else {
                     self.Steps.text = "nil"
                 }
