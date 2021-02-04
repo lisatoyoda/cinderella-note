@@ -15,9 +15,14 @@ class WalkingViewController: UIViewController {
     @IBOutlet var Goal: UILabel!
     
     var plan: Int = 3000
-    
+    let savedValue = UserDefaults.standard
     
     override func viewDidLoad() {
+        if savedValue.object(forKey: "goalsave") != nil{
+            plan = savedValue.object(forKey: "goalsave") as! Int
+        }
+            
+        
         super.viewDidLoad()
         let readType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!
         store.requestAuthorization(toShare: [], read: [readType]) { _, _ in }
