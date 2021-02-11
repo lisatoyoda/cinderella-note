@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class MealViewController: UIViewController {
+class MealViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var breakfastTextField: UITextField!
     @IBOutlet var lunchTextField: UITextField!
@@ -44,6 +44,7 @@ class MealViewController: UIViewController {
             else if sender.direction == .left {
                 print("left")
             }
+            
         }
         
         dateFormatter.dateFormat = "yyyy/MM/dd"
@@ -56,6 +57,22 @@ class MealViewController: UIViewController {
         lunchTextField.text = saveData.object(forKey: selectedDay + "lunch") as? String
         supperTextField.text = saveData.object(forKey: selectedDay + "supper") as? String
         
+        breakfastTextField.delegate = self
+        lunchTextField.delegate = self
+        supperTextField.delegate = self
+        oyatsuTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        breakfastTextField.resignFirstResponder()
+        return true
+        lunchTextField.resignFirstResponder()
+        return true
+        supperTextField.resignFirstResponder()
+        return true
+        oyatsuTextField.resignFirstResponder()
+        return true
+
     }
     
     @objc func swiped(_ sender: UISwipeGestureRecognizer) {
