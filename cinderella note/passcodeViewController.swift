@@ -13,9 +13,9 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     var width: CGFloat!
     var height: CGFloat!
     
-    var numbers = ["1","2","3","4","5","6","7","8","9","0","Del",]
+    var numbers = ["1","2","3","4","5","6","7","8","9","","0","Del"]
     
-    
+    var inputNumber = [Int]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,23 +33,76 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         let numberLabel = cell.contentView.viewWithTag(1) as! UILabel
-                numberLabel.text = numbers[indexPath.row]
-
-                return cell
-            }
+        numberLabel.text = numbers[indexPath.row]
+        
+        return cell
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         // 画面の縦横のサイズ
-         width = UIScreen.main.bounds.size.width
-         height = UIScreen.main.bounds.size.height
-         return CGSize(width: self.width/3.2, height: self.height/9)
-     }
- 
+        // 画面の縦横のサイズ
+        width = UIScreen.main.bounds.size.width
+        height = UIScreen.main.bounds.size.height
+        return CGSize(width: self.width/3.2, height: self.height/9)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(indexPath.row)のセルを押しました")
+        
+        if inputNumber.count < 3 {
+                   tapNumber(cellNum: indexPath.row)
+               } else if inputNumber.count == 3 {
+                   print("4桁になった")
+                   tapNumber(cellNum: indexPath.row)
+               }
+    }
+    
+    func tapNumber(cellNum: Int) {
+           if cellNum == 0 {
+               inputNumber.append(1)
+           }
+           if cellNum == 1 {
+               inputNumber.append(2)
+           }
+           if cellNum == 2 {
+               inputNumber.append(3)
+           }
+           if cellNum == 3 {
+               inputNumber.append(4)
+           }
+           if cellNum == 4 {
+               inputNumber.append(5)
+           }
+           if cellNum == 5 {
+               inputNumber.append(6)
+           }
+           if cellNum == 6 {
+               inputNumber.append(7)
+           }
+           if cellNum == 7 {
+               inputNumber.append(8)
+           }
+           if cellNum == 8 {
+               inputNumber.append(9)
+           }
+           if cellNum == 9 {
+              
+           }
+           if cellNum == 10 {
+               inputNumber.append(0)
+           }
+           if cellNum == 11 {
+          
+               inputNumber.removeLast()
+           }
+           print(inputNumber)
+       }
     
     
-    
-    
+    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            print("\(indexPath.row)のセルを押しました")
+            tapNumber(cellNum: indexPath.row)
+        }
     
     /*
      // MARK: - Navigation
