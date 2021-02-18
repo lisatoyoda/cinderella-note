@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420C66DB25DE68CF00C316A1 /* passcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420C66D925DE68CE00C316A1 /* passcodeViewController.swift */; };
 		423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B22500F02900F59D3D /* AppDelegate.swift */; };
 		423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B42500F02900F59D3D /* SceneDelegate.swift */; };
 		423F07B72500F02900F59D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B62500F02900F59D3D /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420C66D925DE68CE00C316A1 /* passcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passcodeViewController.swift; sourceTree = "<group>"; };
 		423F07AF2500F02900F59D3D /* cinderella note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinderella note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423F07B22500F02900F59D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423F07B42500F02900F59D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				42A3A09C258228E2004F44CF /* WalkingViewController.swift */,
 				423F1C4F25C2C45600618957 /* WalkingGoalViewController.swift */,
 				42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */,
+				420C66D925DE68CE00C316A1 /* passcodeViewController.swift */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */,
 				423F1C5025C2C45600618957 /* WalkingGoalViewController.swift in Sources */,
 				42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */,
+				420C66DB25DE68CF00C316A1 /* passcodeViewController.swift in Sources */,
 				42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */,
 				423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */,
 				42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */,
