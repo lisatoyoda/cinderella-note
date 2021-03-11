@@ -17,12 +17,36 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var inputNumber = [Int]()
     
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    
+    @IBOutlet  var registerButton: UIButton!
+    var pinNumber = [Int]()
+    let saveData: UserDefaults = UserDefaults.standard
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         // Do any additional setup after loading the view.
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if saveData.object(forKey: "pinNumber") != nil {
+            pinNumber = saveData.object(forKey: "pinNumber") as![Int]
+            print("ロックナンバー：\(pinNumber)")
+            registerButton.setTitle("ロックナンバーの変更はこちら", for: .normal)
+        } else {
+            //ロックナンバーがない時
+            print("ロックナンバーを登録してください")
+            registerButton.setTitle("ロックナンバーの設定はこちら", for: .normal)
+        }
+    }
+        }
+    
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -46,68 +70,106 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         return CGSize(width: self.width/3.2, height: self.height/9)
     }
     
+ 
+    
+    //     タップされた時
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("\(indexPath.row)のセルを押しました")
-        
+        // 暗証番号が4桁以上になるのを防ぐ
         if inputNumber.count < 3 {
-                   tapNumber(cellNum: indexPath.row)
-               } else if inputNumber.count == 3 {
-                   print("4桁になった")
-                   tapNumber(cellNum: indexPath.row)
-               }
+            tapNumber(cellNum: indexPath.row)
+            imageChange()
+        } else if inputNumber.count == 3 {
+            print("4桁になった")
+            tapNumber(cellNum: indexPath.row)
+            imageChange()
+        }
     }
     
     func tapNumber(cellNum: Int) {
-           if cellNum == 0 {
-               inputNumber.append(1)
-           }
-           if cellNum == 1 {
-               inputNumber.append(2)
-           }
-           if cellNum == 2 {
-               inputNumber.append(3)
-           }
-           if cellNum == 3 {
-               inputNumber.append(4)
-           }
-           if cellNum == 4 {
-               inputNumber.append(5)
-           }
-           if cellNum == 5 {
-               inputNumber.append(6)
-           }
-           if cellNum == 6 {
-               inputNumber.append(7)
-           }
-           if cellNum == 7 {
-               inputNumber.append(8)
-           }
-           if cellNum == 8 {
-               inputNumber.append(9)
-           }
-           if cellNum == 9 {
-              
-           }
-           if cellNum == 10 {
-               inputNumber.append(0)
-           }
-           if cellNum == 11 {
-          
-               inputNumber.removeLast()
-           }
-           print(inputNumber)
-       }
-    
-   
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+        if cellNum == 0 {
+            inputNumber.append(1)
+        }
+        if cellNum == 1 {
+            inputNumber.append(2)
+        }
+        if cellNum == 2 {
+            inputNumber.append(3)
+        }
+        if cellNum == 3 {
+            inputNumber.append(4)
+        }
+        if cellNum == 4 {
+            inputNumber.append(5)
+        }
+        if cellNum == 5 {
+            inputNumber.append(6)
+        }
+        if cellNum == 6 {
+            inputNumber.append(7)
+        }
+        if cellNum == 7 {
+            inputNumber.append(8)
+        }
+        if cellNum == 8 {
+            inputNumber.append(9)
+        }
+        if cellNum == 9 {
+            
+        }
+        if cellNum == 10 {
+            inputNumber.append(0)
+        }
+        if cellNum == 11 {
+            if inputNumber.count>0 {
+                inputNumber.removeLast()
+            }
+            else{
+                print("中身がありません")
+            }
+            
+            inputNumber.removeLast()
+        }
+        print(inputNumber)
+    }
+    func imageChange() {
+        if inputNumber.count == 0 {
+            image1.image = UIImage(named: "lockgray.png")
+            image2.image = UIImage(named: "lockgray.png")
+            image3.image = UIImage(named: "lockgray.png")
+            image4.image = UIImage(named: "lockgray.png")
+        } else if inputNumber.count == 1 {
+            image1.image = UIImage(named: "lockblue.png")
+            image2.image = UIImage(named: "lockgray.png")
+            image3.image = UIImage(named: "lockgray.png")
+            image4.image = UIImage(named: "lockgray.png")
+        } else if inputNumber.count == 2 {
+            image1.image = UIImage(named: "lockblue.png")
+            image2.image = UIImage(named:"lockblue.png")
+            image3.image = UIImage(named: "lockgray.png")
+            image4.image = UIImage(named: "lockgray.png")
+        } else if inputNumber.count == 3 {
+            image1.image = UIImage(named: "lockblue.png")
+            image2.image = UIImage(named: "lockblue.png")
+            image3.image = UIImage(named: "lockblue.png")
+            image4.image = UIImage(named: "lockgray.png")
+        } else if inputNumber.count == 4 {
+            image1.image = UIImage(named: "lockblue.png")
+            image2.image = UIImage(named: "lockblue.png")
+            image3.image = UIImage(named: "lockblue.png")
+            image4.image = UIImage(named: "lockblue.png")
+        }
+        
+        
+        /*
+         // MARK: - Navigation
+         
+         // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
+    }
 }

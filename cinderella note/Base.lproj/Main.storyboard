@@ -83,7 +83,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-cK-BWD">
                                 <rect key="frame" x="0.0" y="369" width="414" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.73887898249999995" blue="0.9696591282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.99947422740000003" green="0.86129275640000003" blue="0.98718396190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rBF-vu-lEL">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -99,11 +99,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-jT-TAh">
-                                                    <rect key="frame" x="26" y="24" width="77" height="80"/>
+                                                    <rect key="frame" x="26" y="24" width="76" height="74"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" red="1" green="0.73887898249999995" blue="0.9696591282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="highlightedColor" red="1" green="0.73887898249999995" blue="0.9696591282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
@@ -114,10 +114,38 @@
                                     <outlet property="delegate" destination="DsO-71-74e" id="aWe-ed-85n"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockgray.png" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-oL-z29">
+                                <rect key="frame" x="20" y="122" width="71" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockgray.png" translatesAutoresizingMaskIntoConstraints="NO" id="JDK-z4-wI3">
+                                <rect key="frame" x="107" y="122" width="79" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockgray.png" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-cu-WSt">
+                                <rect key="frame" x="211" y="122" width="79" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lockgray.png" translatesAutoresizingMaskIntoConstraints="NO" id="eLs-Xe-GHp">
+                                <rect key="frame" x="307" y="122" width="79" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-DZ-wHK">
+                                <rect key="frame" x="184" y="241" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Q7-rz-KUW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="image1" destination="b4h-oL-z29" id="qUc-u7-haE"/>
+                        <outlet property="image2" destination="JDK-z4-wI3" id="gav-ZV-olQ"/>
+                        <outlet property="image3" destination="JUA-cu-WSt" id="91L-OG-c9J"/>
+                        <outlet property="image4" destination="eLs-Xe-GHp" id="Iyz-xN-tk7"/>
+                        <outlet property="registerButton" destination="HjV-DZ-wHK" id="sG1-ym-MVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVe-tv-WeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -841,6 +869,7 @@
     </scenes>
     <color key="tintColor" red="0.99947422740000003" green="0.86526113010000005" blue="0.98718396190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
+        <image name="lockgray.png" width="750" height="535"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

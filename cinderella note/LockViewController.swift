@@ -10,6 +10,7 @@ import UIKit
 
 class LockViewController: UIViewController {
     
+  
     @IBOutlet var locknumber : UITextField!
     @IBOutlet var okbutton : UIButton!
     let saveData: UserDefaults = UserDefaults.standard
@@ -31,6 +32,9 @@ class LockViewController: UIViewController {
             self.performSegue(withIdentifier: "toMain", sender: nil)
         }
     }
+    
+   
+        
     /*
      // MARK: - Navigation
      
