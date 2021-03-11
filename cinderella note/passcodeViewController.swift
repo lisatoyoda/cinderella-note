@@ -98,11 +98,7 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
            print(inputNumber)
        }
     
-    
-    private func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("\(indexPath.row)のセルを押しました")
-            tapNumber(cellNum: indexPath.row)
-        }
+   
     
     /*
      // MARK: - Navigation
