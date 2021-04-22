@@ -26,6 +26,7 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     var pinNumber = [Int]()
     let saveData: UserDefaults = UserDefaults.standard
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,15 +37,15 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewWillAppear(_ animated: Bool) {
         if saveData.object(forKey: "pinNumber") != nil {
             pinNumber = saveData.object(forKey: "pinNumber") as![Int]
-            print("ロックナンバー：\(pinNumber)")
-            registerButton.setTitle("ロックナンバーの変更はこちら", for: .normal)
+            print("パスコード\(pinNumber)")
+            registerButton.setTitle("パスコードの変更はこちら", for: .normal)
         } else {
-            //ロックナンバーがない時
-            print("ロックナンバーを登録してください")
-            registerButton.setTitle("ロックナンバーの設定はこちら", for: .normal)
+            //パスコードがない時
+            print("パスコードを登録してください")
+            registerButton.setTitle("パスコードの設定はこちら", for: .normal)
         }
     }
-        }
+        
     
     
     
@@ -61,7 +62,14 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         let numberLabel = cell.contentView.viewWithTag(1) as! UILabel
         numberLabel.text = numbers[indexPath.row]
         
+      
+        
+        let borderColor = UIColor(red:255/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0).cgColor
+        numberLabel.layer.borderColor = borderColor
+        numberLabel.layer.borderWidth = 1
+    
         return cell
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // 画面の縦横のサイズ
@@ -69,23 +77,49 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         height = UIScreen.main.bounds.size.height
         return CGSize(width: self.width/3.2, height: self.height/9)
     }
-    
- 
-    
-    //     タップされた時
+//    タップされた時
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.row)のセルを押しました")
-        // 暗証番号が4桁以上になるのを防ぐ
-        if inputNumber.count < 3 {
-            tapNumber(cellNum: indexPath.row)
-            imageChange()
-        } else if inputNumber.count == 3 {
-            print("4桁になった")
-            tapNumber(cellNum: indexPath.row)
-            imageChange()
-        }
-    }
-    
+          print("\(indexPath.row)のセルを押しました")
+          // パスコードが4桁以上になるのを防ぐ
+          if inputNumber.count < 3 {
+              tapNumber(cellNum: indexPath.row)
+              imageChange()
+            
+          } else if inputNumber.count == 3 {
+              print("4桁になった")
+              tapNumber(cellNum: indexPath.row)
+              imageChange()
+
+              if inputNumber.count == 4 {
+                  if inputNumber == pinNumber {
+                      // 入力がパスコードと一致している時、アプリのメイン画面へ。
+                      // segueのidを"toMain"にしておく
+                      performSegue(withIdentifier: "toMain", sender: nil)
+                  } else {
+                      // 入力がパスコードと一致していない時
+                      print("パスコードが異なっています")
+                      // アラートの表示
+                      let alert: UIAlertController = UIAlertController(title: "パスコードが異なっています", message: "パスコードが異なっています。再度入力してください。",preferredStyle: .alert)
+                      alert.addAction(
+                          UIAlertAction(
+                              title: "OK",
+
+                              style: .default,
+                              handler: { action in
+                                  // OKを押した時、inputNumberの中身を全て削除し、はじめから入力してもらう
+                                  self.navigationController?.popViewController(animated: true)
+                                  print("OKボタンが押されました！")
+                                  self.inputNumber.removeAll()
+                                  self.imageChange()
+                              }
+                          )
+                      )
+                      present(alert, animated: true, completion: nil)
+                  }
+              }
+          }
+      }
+
     func tapNumber(cellNum: Int) {
         if cellNum == 0 {
             inputNumber.append(1)

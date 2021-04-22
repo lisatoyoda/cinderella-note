@@ -41,7 +41,7 @@ class RuleViewController: UIViewController {
     @IBAction func push1() {
         if plan1 == 0 {
             plan1 = 1
-            finishbutton1.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
+            finishbutton1.setBackgroundImage(UIImage(named: "checkMark.png"), for: .normal)
             print("食事が押された")
             RuleArray.append("食事")
             //            print("食事押した")
@@ -59,7 +59,7 @@ class RuleViewController: UIViewController {
     @IBAction func push2() {
         if plan2 == 0 {
             plan2 = 1
-            finishbutton2.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
+            finishbutton2.setBackgroundImage(UIImage(named: "checkMark.png"), for: .normal)
             print("睡眠が押された")
             RuleArray.append("睡眠")
             //            print("睡眠押した")
@@ -79,7 +79,7 @@ class RuleViewController: UIViewController {
     @IBAction func push3() {
         if plan3 == 0 {
             plan3 = 1
-            finishbutton3.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
+            finishbutton3.setBackgroundImage(UIImage(named: "checkMark.png"), for: .normal)
             //            print("睡眠がおした")
             RuleArray.append("ウォーキング")
             
@@ -98,7 +98,7 @@ class RuleViewController: UIViewController {
     @IBAction func push4() {
         if plan4 == 0 {
             plan4 = 1
-            finishbutton4.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
+            finishbutton4.setBackgroundImage(UIImage(named: "checkMark.png"), for: .normal)
             print("日記が押された")
             RuleArray.append("日記")
             //            print("日記押した")
@@ -117,7 +117,7 @@ class RuleViewController: UIViewController {
     @IBAction func push5() {
         if plan5 == 0 {
             plan5 = 1
-            finishbutton5.setBackgroundImage(UIImage(named: "checkMark.jpg"), for: .normal)
+            finishbutton5.setBackgroundImage(UIImage(named: "checkMark.png"), for: .normal)
             print("その他が押された")
             RuleArray.append("その他")
             //            print("日記押した")

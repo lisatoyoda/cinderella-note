@@ -11,6 +11,7 @@
 		42356AD625FA1AD500049B54 /* lock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42356AD525FA1AD500049B54 /* lock.jpg */; };
 		42356ADE25FA24BC00049B54 /* lockblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 42356ADD25FA24BC00049B54 /* lockblue.png */; };
 		42356AE325FA252D00049B54 /* lockgray.png in Resources */ = {isa = PBXBuildFile; fileRef = 42356AE225FA252D00049B54 /* lockgray.png */; };
+		42356AEB260358A600049B54 /* checkMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 42356AEA260358A500049B54 /* checkMark.png */; };
 		423F07B32500F02900F59D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B22500F02900F59D3D /* AppDelegate.swift */; };
 		423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B42500F02900F59D3D /* SceneDelegate.swift */; };
 		423F07B72500F02900F59D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07B62500F02900F59D3D /* ViewController.swift */; };
@@ -24,7 +25,6 @@
 		423F1C5025C2C45600618957 /* WalkingGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F1C4F25C2C45600618957 /* WalkingGoalViewController.swift */; };
 		42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A09C258228E2004F44CF /* WalkingViewController.swift */; };
 		42A3A0A125822DC9004F44CF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A3A0A025822DC9004F44CF /* HealthKit.framework */; };
-		42A3A0A325823A6D004F44CF /* checkMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42A3A0A225823A6D004F44CF /* checkMark.jpg */; };
 		42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */; };
 		42A3A0A7258B6990004F44CF /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A0A6258B6990004F44CF /* RuleViewController.swift */; };
 		42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE8225540C6700A7F60A /* MealViewController.swift */; };
@@ -53,6 +53,7 @@
 		42356AD525FA1AD500049B54 /* lock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lock.jpg; sourceTree = "<group>"; };
 		42356ADD25FA24BC00049B54 /* lockblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lockblue.png; sourceTree = "<group>"; };
 		42356AE225FA252D00049B54 /* lockgray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lockgray.png; sourceTree = "<group>"; };
+		42356AEA260358A500049B54 /* checkMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkMark.png; sourceTree = "<group>"; };
 		423F07AF2500F02900F59D3D /* cinderella note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinderella note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		423F07B22500F02900F59D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423F07B42500F02900F59D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		42A3A09C258228E2004F44CF /* WalkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingViewController.swift; sourceTree = "<group>"; };
 		42A3A09E25822DC9004F44CF /* cinderella note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cinderella note.entitlements"; sourceTree = "<group>"; };
 		42A3A0A025822DC9004F44CF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		42A3A0A225823A6D004F44CF /* checkMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkMark.jpg; sourceTree = "<group>"; };
 		42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myRuleViewController.swift; sourceTree = "<group>"; };
 		42A3A0A6258B6990004F44CF /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		42ACBE8225540C6700A7F60A /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -130,10 +130,10 @@
 		423F07B12500F02900F59D3D /* cinderella note */ = {
 			isa = PBXGroup;
 			children = (
+				42356AEA260358A500049B54 /* checkMark.png */,
 				42356AE225FA252D00049B54 /* lockgray.png */,
 				42356ADD25FA24BC00049B54 /* lockblue.png */,
 				42356AD525FA1AD500049B54 /* lock.jpg */,
-				42A3A0A225823A6D004F44CF /* checkMark.jpg */,
 				42A3A09E25822DC9004F44CF /* cinderella note.entitlements */,
 				423F07B22500F02900F59D3D /* AppDelegate.swift */,
 				423F07B42500F02900F59D3D /* SceneDelegate.swift */,
@@ -285,8 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42356AEB260358A600049B54 /* checkMark.png in Resources */,
 				423F07BF2500F02E00F59D3D /* LaunchScreen.storyboard in Resources */,
-				42A3A0A325823A6D004F44CF /* checkMark.jpg in Resources */,
 				423F07BC2500F02E00F59D3D /* Assets.xcassets in Resources */,
 				42356AD625FA1AD500049B54 /* lock.jpg in Resources */,
 				42356AE325FA252D00049B54 /* lockgray.png in Resources */,
