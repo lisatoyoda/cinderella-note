@@ -23,6 +23,8 @@
 		423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E42500F1B900F59D3D /* LockViewController.swift */; };
 		423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */; };
 		423F1C5025C2C45600618957 /* WalkingGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F1C4F25C2C45600618957 /* WalkingGoalViewController.swift */; };
+		424E6EF42643FB3200805AD7 /* aaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E6EF32643FB3100805AD7 /* aaViewController.swift */; };
+		424E6EF9264402DE00805AD7 /* SleepingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E6EF8264402DE00805AD7 /* SleepingViewController.swift */; };
 		42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A09C258228E2004F44CF /* WalkingViewController.swift */; };
 		42A3A0A125822DC9004F44CF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A3A0A025822DC9004F44CF /* HealthKit.framework */; };
 		42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3A0A4258B68C8004F44CF /* myRuleViewController.swift */; };
@@ -71,6 +73,8 @@
 		423F07E42500F1B900F59D3D /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		423F07E62500FB9200F59D3D /* SetLockNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLockNumberViewController.swift; sourceTree = "<group>"; };
 		423F1C4F25C2C45600618957 /* WalkingGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingGoalViewController.swift; sourceTree = "<group>"; };
+		424E6EF32643FB3100805AD7 /* aaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaViewController.swift; sourceTree = "<group>"; };
+		424E6EF8264402DE00805AD7 /* SleepingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepingViewController.swift; sourceTree = "<group>"; };
 		42A3A09C258228E2004F44CF /* WalkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingViewController.swift; sourceTree = "<group>"; };
 		42A3A09E25822DC9004F44CF /* cinderella note.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cinderella note.entitlements"; sourceTree = "<group>"; };
 		42A3A0A025822DC9004F44CF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -151,6 +155,8 @@
 				423F1C4F25C2C45600618957 /* WalkingGoalViewController.swift */,
 				42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */,
 				420C66D925DE68CE00C316A1 /* passcodeViewController.swift */,
+				424E6EF8264402DE00805AD7 /* SleepingViewController.swift */,
+				424E6EF32643FB3100805AD7 /* aaViewController.swift */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424E6EF42643FB3200805AD7 /* aaViewController.swift in Sources */,
 				423F07E72500FB9200F59D3D /* SetLockNumberViewController.swift in Sources */,
 				423F07E52500F1B900F59D3D /* LockViewController.swift in Sources */,
 				42ACBE8325540C6700A7F60A /* MealViewController.swift in Sources */,
@@ -326,6 +333,7 @@
 				42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */,
 				420C66DB25DE68CF00C316A1 /* passcodeViewController.swift in Sources */,
 				42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */,
+				424E6EF9264402DE00805AD7 /* SleepingViewController.swift in Sources */,
 				423F07B52500F02900F59D3D /* SceneDelegate.swift in Sources */,
 				42A3A09D258228E2004F44CF /* WalkingViewController.swift in Sources */,
 			);

@@ -64,7 +64,7 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
         
       
         
-        let borderColor = UIColor(red:255/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0).cgColor
+        let borderColor = UIColor(red: 148/255, green: 108/255, blue: 69/255, alpha: 1.0).cgColor
         numberLabel.layer.borderColor = borderColor
         numberLabel.layer.borderWidth = 1
     
