@@ -12,30 +12,7 @@ import HealthKit
 class SleepingViewController: UIViewController {
     
     let healthStore = HKHealthStore()
-    let readTypes = Set([
-                            HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!])
-    healthStorerequestAuthorization(toShare: [], read: readTypes, completion: { success, error in
     
-    if success == false {
-        print("データにアクセスできません")
-        return
-    }
-    })
-    
-    
-    // 睡眠データを取得
-    let query = HKSampleQuery(sampleType: HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
-                                    predicate: HKQuery.predicateForSamples(withStart: fromDate, end: toDate, options: []),
-                                    limit: HKObjectQueryNoLimit,
-                                    sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ (query, results, error) in
-        
-        guard error == nil else { print("error"); return }
-        
-        if let tmpResults = results as? [HKCategorySample] {
-            // 取得したデータを格納
-        }
-    }
-    healthStore.execute(query)
     
     @IBOutlet var sleepinglabel: UILabel!
     @IBAction func setgoalbutton() {
@@ -46,7 +23,36 @@ class SleepingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let fromDate: Date = Date()-3600*24*10
+        let toDate: Date = Date()
+        
+        let readTypes = Set([
+                                HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!])
+        healthStore.requestAuthorization(toShare: [], read: readTypes, completion: { success, error in
+        
+        if success == false {
+            print("データにアクセスできません")
+            return
+        }
+        })
+        
+        
+        // 睡眠データを取得
+        let query = HKSampleQuery(sampleType: HKObjectType.categoryType(forIdentifier: HKCategoryTypeIdentifier.sleepAnalysis)!,
+                                        predicate: HKQuery.predicateForSamples(withStart: fromDate, end: toDate, options: []),
+                                        limit: HKObjectQueryNoLimit,
+                                        sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]){ (query, results, error) in
+            
+            guard error == nil else { print("error"); return }
+            
+            if let tmpResults = results as? [HKCategorySample] {
+                for item in tmpResults{
+                    print(item)
+                }
+                // 取得したデータを格納
+            }
+        }
+        healthStore.execute(query)
         // Do any additional setup after loading the view.
     }
     
@@ -63,3 +69,12 @@ class SleepingViewController: UIViewController {
 
 }
 
+struct sleeptime {
+    var sleeptime: TimeInterval
+    var startDate: Date
+    init (endDate: Date, StartDate: Date) {
+        let difference = endDate.timeIntervalSince(StartDate)
+        self.sleeptime = difference
+        self.startDate = StartDate
+    }
+}
