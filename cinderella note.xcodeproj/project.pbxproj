@@ -33,6 +33,8 @@
 		42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */; };
 		42C64D642656769500416D37 /* xibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C64D622656769500416D37 /* xibViewController.swift */; };
 		42C64D652656769500416D37 /* xibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C64D632656769500416D37 /* xibViewController.xib */; };
+		42C64D6B265F9CB700416D37 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C64D69265F9CB700416D37 /* CollectionViewCell.swift */; };
+		42C64D6C265F9CB700416D37 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C64D6A265F9CB700416D37 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		42ACBE84255D46CF00A7F60A /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		42C64D622656769500416D37 /* xibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xibViewController.swift; sourceTree = "<group>"; };
 		42C64D632656769500416D37 /* xibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = xibViewController.xib; sourceTree = "<group>"; };
+		42C64D69265F9CB700416D37 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		42C64D6A265F9CB700416D37 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				424E6EF32643FB3100805AD7 /* aaViewController.swift */,
 				42C64D622656769500416D37 /* xibViewController.swift */,
 				42C64D632656769500416D37 /* xibViewController.xib */,
+				42C64D69265F9CB700416D37 /* CollectionViewCell.swift */,
+				42C64D6A265F9CB700416D37 /* CollectionViewCell.xib */,
 			);
 			path = "cinderella note";
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				42356AE325FA252D00049B54 /* lockgray.png in Resources */,
 				42356ADE25FA24BC00049B54 /* lockblue.png in Resources */,
 				423F07BA2500F02900F59D3D /* Main.storyboard in Resources */,
+				42C64D6C265F9CB700416D37 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +346,7 @@
 				423F1C5025C2C45600618957 /* WalkingGoalViewController.swift in Sources */,
 				42A3A0A5258B68C8004F44CF /* myRuleViewController.swift in Sources */,
 				420C66DB25DE68CF00C316A1 /* passcodeViewController.swift in Sources */,
+				42C64D6B265F9CB700416D37 /* CollectionViewCell.swift in Sources */,
 				42ACBE85255D46CF00A7F60A /* DiaryViewController.swift in Sources */,
 				424E6EF9264402DE00805AD7 /* SleepingViewController.swift in Sources */,
 				42C64D642656769500416D37 /* xibViewController.swift in Sources */,

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="cinderella_note" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="41" height="247"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="41" height="247"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-s0-VRe">
+                        <rect key="frame" x="5" y="0.0" width="31" height="247"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="247" id="ntW-iQ-M3X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="d0B-s0-VRe" secondAttribute="bottom" constant="3" id="8bZ-0l-ljY"/>
+                <constraint firstItem="d0B-s0-VRe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" placeholder="YES" id="EWy-KY-3M6"/>
+                <constraint firstItem="d0B-s0-VRe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" placeholder="YES" id="Qes-6A-xBk"/>
+                <constraint firstAttribute="bottom" secondItem="d0B-s0-VRe" secondAttribute="bottom" id="bLB-Cr-z53"/>
+                <constraint firstItem="d0B-s0-VRe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dOP-cb-OrZ"/>
+                <constraint firstAttribute="trailing" secondItem="d0B-s0-VRe" secondAttribute="trailing" constant="5" id="uQ1-TX-8R1"/>
+            </constraints>
+            <size key="customSize" width="41" height="247"/>
+            <point key="canvasLocation" x="36.956521739130437" y="114.84375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
