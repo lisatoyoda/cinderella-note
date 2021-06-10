@@ -15,7 +15,7 @@ class CollectionViewCell: UICollectionViewCell {
     var height: CGFloat = 0.5 {
         didSet {
             guard let graphView = graphView else { return }
-            graphView.widthAnchor.constraint(equalToConstant: height * self.frame.width).isActive = true
+            graphView.heightAnchor.constraint(equalToConstant: height * self.frame.height).isActive = true
         }
     }
     

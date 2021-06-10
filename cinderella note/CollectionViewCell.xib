@@ -19,22 +19,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-s0-VRe">
-                        <rect key="frame" x="5" y="0.0" width="31" height="247"/>
+                        <rect key="frame" x="10" y="0.0" width="21" height="247"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="247" id="ntW-iQ-M3X"/>
+                            <constraint firstAttribute="height" constant="247" id="N4C-Yg-jfC"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="d0B-s0-VRe" secondAttribute="bottom" constant="3" id="8bZ-0l-ljY"/>
-                <constraint firstItem="d0B-s0-VRe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" placeholder="YES" id="EWy-KY-3M6"/>
-                <constraint firstItem="d0B-s0-VRe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" placeholder="YES" id="Qes-6A-xBk"/>
-                <constraint firstAttribute="bottom" secondItem="d0B-s0-VRe" secondAttribute="bottom" id="bLB-Cr-z53"/>
-                <constraint firstItem="d0B-s0-VRe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dOP-cb-OrZ"/>
-                <constraint firstAttribute="trailing" secondItem="d0B-s0-VRe" secondAttribute="trailing" constant="5" id="uQ1-TX-8R1"/>
+                <constraint firstAttribute="bottom" secondItem="d0B-s0-VRe" secondAttribute="bottom" id="8bZ-0l-ljY"/>
+                <constraint firstItem="d0B-s0-VRe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" placeholder="YES" id="Qes-6A-xBk"/>
+                <constraint firstAttribute="trailing" secondItem="d0B-s0-VRe" secondAttribute="trailing" constant="10" id="uQ1-TX-8R1"/>
             </constraints>
             <size key="customSize" width="41" height="247"/>
             <point key="canvasLocation" x="36.956521739130437" y="114.84375"/>

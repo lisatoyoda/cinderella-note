@@ -22,13 +22,13 @@ class SleepingViewController: UIViewController {
     }
     
     
-    @IBOutlet private weak var tableView: UICollectionView! {
-           didSet {
-               tableView.delegate = self
-               tableView.dataSource = self
-            self.tableView?.register(UINib(nibName: "TableViewCell", bundle: nil), forCellWithReuseIdentifier: "GraphViewCell")
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+                   collectionView.delegate = self
+                   collectionView.dataSource = self
+                   self.collectionView?.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CollectionViewCell")
+               }
            }
-       }
     
    
 
@@ -80,7 +80,7 @@ struct SleepTimeItem {
     }
 }
             
-extension SleepingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SleepingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sleepRecords.count
     }
