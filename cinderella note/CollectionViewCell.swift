@@ -12,12 +12,23 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var graphView: UIView!
     
-    var width: CGFloat = 0.5 {
+    var height: CGFloat = 0.5 {
         didSet {
             guard let graphView = graphView else { return }
-            graphView.widthAnchor.constraint(equalToConstant: width * self.frame.width).isActive = true
+            graphView.widthAnchor.constraint(equalToConstant: height * self.frame.width).isActive = true
         }
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        Bundle.main.loadNibNamed("TestCollectionViewCell", owner: self, options: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

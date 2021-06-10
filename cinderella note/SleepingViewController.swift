@@ -22,11 +22,11 @@ class SleepingViewController: UIViewController {
     }
     
     
-    @IBOutlet private weak var tableView: UITableView! {
+    @IBOutlet private weak var tableView: UICollectionView! {
            didSet {
                tableView.delegate = self
                tableView.dataSource = self
-               self.tableView?.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "GraphViewCell")
+            self.tableView?.register(UINib(nibName: "TableViewCell", bundle: nil), forCellWithReuseIdentifier: "GraphViewCell")
            }
        }
     
@@ -81,14 +81,20 @@ struct SleepTimeItem {
 }
             
 extension SleepingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sleepRecords.count
     }
     
-    func tableView(_ tsbleView: UICollectionView, cellForRowAt indexpath: IndexPath) -> UITable graph let cell = CollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { fatalError() }
-    cell.height = CGFloat(sleepRecords[indexPath.row].sleepTime/maxSleepTime)
-    return cell
-}
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { fatalError() }
+        
+        cell.height = CGFloat(sleepRecords[indexPath.row].sleepTime/maxSleepTime)
+        return cell
+    
+    }
+    
+ 
+    
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 50, height: 240)
@@ -97,7 +103,7 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
         
     
               
-    
+}
 
     /*
     // MARK: - Navigation
