@@ -9,7 +9,7 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var graphView: UIView!
     
     var height: CGFloat = 0.5 {

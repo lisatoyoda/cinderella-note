@@ -63,6 +63,9 @@ class SleepingViewController: UIViewController {
                         self.sleepRecords.append(sleepItem)
                         print(self.sleepRecords)
                     }
+                    DispatchQueue.main.async {
+                                            self.collectionView.reloadData()
+                                        }
                 }
             }
             //クエリの実行
@@ -89,6 +92,7 @@ extension SleepingViewController: UICollectionViewDelegate, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { fatalError() }
         
         cell.height = CGFloat(sleepRecords[indexPath.row].sleepTime/maxSleepTime)
+        cell.timeLabel.text=String(floor(sleepRecords[indexPath.row].sleepTime/3600))+"時間"
         return cell
     
     }
