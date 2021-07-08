@@ -206,4 +206,8 @@ class passcodeViewController: UIViewController, UICollectionViewDelegate, UIColl
          */
         
     }
+    
+    @IBAction func savepassword() {
+        performSegue(withIdentifier: "toLock", sender: nil)
+    }
 }
